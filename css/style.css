@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Niconne&display=swap');
+
+
+.header-text{
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Niconne', cursive;
+    font-size: 4em;
+}
+
+@media screen and (max-width: 769px) {
+.header-text{
+    font-size: 2em;
+}
+.header-undertext {
+    font-size: .8em;
+}
+}
