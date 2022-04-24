@@ -1,6 +1,4 @@
 # website
 my little website
 
-add a favicon
-
-lets go
+- i wanna create a python script to manage the Navigation menu

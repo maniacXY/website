@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html"">About Me</a>
@@ -77,37 +77,52 @@
 
     <!-- CONTENT -->
     <div class="container text-center">
-        <h1 class="mb-3 bg-light border border-secondary border-2 rounded-pill fs-5 p-2">Word To PDF Converter</h1>
+        <h1 class="mb-3 bg-light border border-secondary border-2 rounded-pill fs-5 p-2">Countdown & Timer</h1>
         <h5>Das Problem</h5>
-        <p>Word bzw Office365 und OpenSource-Writer wie z.B. LibreOffice verstehen sich leider immer noch nicht.
-            In der Ausbildung wird nur mit Windows gearbeitet, privat arbeite ich hauptsächlich mit Linux.
+        <p>Pomodoro: Oft habe ich die Zeit beim Coden und vor allem die Pausen vergessen. Deswegen wollte ich mir einen Timer erstellen, der mich dabei unterstützt
         </p>
-        <p>Somit war die Formatvorlage für mich unbrauchbar, die Daten habe ich allerdings in der Ausbildung bereits erfasst. Im Bild darunter sieht 
-            man rechts das WordFormat und links die fertige PDF -> das Ziel</p>
-        <img src="pics/word_to_pdf.png" class="img-fluid p-3" style="width: 80%;" alt="Bild von Wordformat und der PDF">
+        <p>Countdown: braucht man immer mal und war bei Ubuntu XFCE nicht dabei, also habe ich mir einen simplen Countdown erstellt
+        </p>
+        <div class="row">
+            <div class="col d-flex align-items-center  justify-content-center">
+                <figure>
+                <img src="pics/pomodoro.png" class="img-fluid" alt="Pomodoro Timer" style="width: 260px;" >
+                <figcaption>Pomodoro Timer</figcaption>
+                </figure>
+            </div>
+            <div class="col d-flex align-items-center  justify-content-center">
+                <figure>
+                <img src="pics/countdown.png" class="img-fluid" alt="Countdown Bild" style="width: 330px;">
+                <figcaption>Countdown</figcaption>
+                </figure>
+            </div>
+        </div>
         
-        <h5>Warum?</h5>
-        <p>Natürlich hätte ich alles über Windows, Office365 händisch korrigieren bzw erstellen können und wäre nach 40 Dateien fertig gewesen.
-            Oder ich nutze die Gelegentheit um mich in das Modul <span class="fw-bolder">fpdf</span> und objektorientierte Programmierung einzuarbeiten ... DESWEGEN </p>
+        <h5>Pomodoro</h5>
+        <p>
+            Der Pomodoro enstand im Rahmen eines Kurses und wurde mit TKinter aufgebaut um die Grundlagen zu lernen. Es ging auch darum Farben zu ändern und Bilder
+            einzubauen. Der Code ist prozedural und es wurde viel mit Funktionen gearbeitet.
+        </p>
         
-        <h5>Der Ansatz</h5>
-        <p>Der Aufbau ist immer der selbe nur die Daten der einzelnen Tage, das Datum, die Nummer, die Kalenderwoche und ggf das Jahr ändern sich.</p>
-        <p>Also könnte man die Daten auslesen, modellieren und in eine Template einfügen ...</p>
-        <p>... somit kann ich weiter mit LibreOffice arbeiten und alle .docx-Berichtshefte mit einem Klick in .pdf fusen! Danke Python!</p>
-        
-        <h5>Die Umsetzung</h5>
-        <ol>
-            <li>Word-Datei in eine json auslesen mit dem Modul docx2txt</li>
-            <li>Eine Template mit dem Modul fpdf erstellen</li>
-            <li>die Daten der json in die Template einfügen und abspeichern</li>
-        </ol>
+        <h5>Countdown</h5>
+        <p>
+            Hier wollte ich schnell und mit wenig Zeilen Code einen simplen Countdown erstellen. Er sollte nicht hübsch sein und keine Sonderfunktionen
+            haben sondern einfach, schnell, übers Terminal abrufbar und unkompliziert. Trotzdem wollte ich Tkinter benutzen um das gelernte nochmal aufzufrischen.
+        </p>
+        <p>
+            Der nächste Schritt wäre den Timer als bash-script zu erstellen ohne Gui
+        </p>
         
         <h5>Hürden?</h5>
-        <p>Es war ein gefriemel die ausgelesene Word-Datei in ein sinnvolles Format zu bekommen und die Erstellung des Templates
-            war ebenfalls sehr eintönig und vor allem die Plazierung der Elemente war oftmals nur mit ausprobieren exakt hinzubekommen.
+        <p>
+            Der Pomodoro war geführt, der Countdown war etwas Online-Suche. Beim Countdown hatte ich zwar wenig Zeilen Code allerdings eine ganze Latte an
+            Imports. Das hat mich für so ein "kleines" Programm doch überrascht.
         </p>
+        
         <h5>Source-Code</h5>
-        <a href="https://github.com/maniacXY/python/tree/main/wordtemplate-to-pdf_creator" target="_blank">hier</a>
+        <a href="https://github.com/maniacXY/python/tree/main/pomodoro_counter" target="_blank">Pomodoro</a><br>
+        <a href="https://github.com/maniacXY/python/tree/main/simple_countdown" target="_blank">Countdown</a>
+
 
     </div>
 
