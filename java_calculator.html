@@ -17,7 +17,7 @@
   </head>
 
 <body>
-   <!-- NAVBAR START -->
+ <!-- NAVBAR START -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html"><img src="favicon/favicon-32x32.png" alt="Code"></a>
@@ -41,13 +41,20 @@
             <li><a class="dropdown-item" href="first_game.html">My first textadventure</a></li>
             <li><a class="dropdown-item" href="timer.html">Countdown & Timer</a></li>
             <li><a class="dropdown-item" href="cookieChallenge.html">CookieChallenge</a></li>
-            <li><a class="dropdown-item" href="bash.html"> BASH-Scripts</a></li>
+            <li><a class="dropdown-item" href="bash.html">BASH-Scripts</a></li>
+            <li><a class="dropdown-item" href="java_calculator.html">Java-Calculator</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item disabled" href="#">Weitere folgen in den nächsten Tagen</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Blog</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            LittleSolutions
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="word_to_pdf.html">colorize-bash-script</a></li>
+            <li><a class="dropdown-item disabled" href="#">Weitere folgen in den nächsten Tagen</a></li>
+          </ul>
         </li>
       </ul>
       <div class="d-flex">
@@ -95,19 +102,32 @@
           Vom User den input abfragen, ihn splitten und in ein Array packen, dann mit switch() oder if() das Rechenzeichen ermitteln und das Ergebnis ausgeben.
         </p>
         
-        <h5>Die Umsetzung</h5>
-        <ul class="row list-group d-flex">
-            <li class ="m-auto col-s-3 col-8 list-group-item">Word-Datei in eine json auslesen mit dem Modul docx2txt</li>
-            <li class ="m-auto col-s-3 col-8 list-group-item">Eine Template mit dem Modul fpdf erstellen</li>
-            <li class ="m-auto col-s-3 col-8 list-group-item">die Daten der json in die Template einfügen und abspeichern</li>
+        <h5>Die Umsetzung - holprig</h5>
+        <ul>
+            <li>Zunächst einmal online Rechere. Wie ging das nochmal mit input()?</li>
+            <li>Gibt es eine Möglichkeit nach einem bestimmten String zu suchen z.B. "+" -> String.IndexOf() schien mir hier eine gute Möglichkeit zu bieten</li>
+            <li>den input Abfragen und zunächst alles Zwischenschritte ausgeben</li>
+            <li>Ich habe mich dazu enschlossen zunächst alles in Main zu schreiben bevor ich Klassen erstelle, da mir noch nicht klar war was ich wie brauche.</li>
+            <li>Nach gefühlten 500 System.out.println() hatte ich endlich ein Ergebnis als Output, keine Fehlermeldungen mehr ...</li>
+            <li>Nun ging es ans Klassen erstellen.</li>
+            <li>Eine Klasse für den Input, eine die mir ein Array mit Zahlen und Rechenzeichen zurückgibt und eine Klasse um den String in 
+              Int umzuwandeln und schließlich auszurechen</li>
+            <li>Nachdem erstellt waren und die Ausgabe gestimmt hat, habe ich ein paar sout's erstellt damit der User ein bisschen Text zu lesen hat.</li>
+            
         </ul>
         
-        <h5>Hürden?</h5>
-        <p>Es war ein gefriemel die ausgelesene Word-Datei in ein sinnvolles Format zu bekommen und die Erstellung des Templates
-            war ebenfalls sehr eintönig und vor allem die Plazierung der Elemente war oftmals nur mit ausprobieren exakt hinzubekommen.
+        <h5>Hürden? - Wo fange ich an?</h5>
+        <p>
+          Der Ansatz war die Rechenzeichen in ein char Array zu packen um dann mit einem for-loop zu checken ob das Zeichen vorkommt. Allderings war die 
+          Ausgabe nicht wir erwatet und ich habe ständig eine util.regex.PatternSyntacException bekommen. Es hat lange gedauert und ich habe mit String.format den
+          char dann in einen String umgewandelt <code>String formatted = String.format("\\%s", myVar);</code>. Dann hat die Fallabfrage funktioniert.
+        </p>
+        <p>
+          Das nächste Problem war, dass ich mit .IndexOf bei der Fallabfrage für die Kalkulation nicht weiter kam. Also versuchte ich es mit <code>String.contains()</code>
+          und habe die 4 Zeichen manuell eingegeben.
         </p>
         <h5>Source-Code</h5>
-        <a href="https://github.com/maniacXY/python/tree/main/wordtemplate-to-pdf_creator" target="_blank">hier</a>
+        <a href="https://github.com/maniacXY/java_stuff/tree/main/Calculator" target="_blank">hier</a>
 
     </div>
 
